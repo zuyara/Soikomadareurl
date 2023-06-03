@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <title>Ushorty-3.0</title>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+               /* Clock styles */
+      #clock {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px;
+        color: rgb(131, 242, 250);
+        font-size: 45px;
+      }
+
+        </style>
+      </head>
+      
+   <body>
+    <h1>Ushorty-3.0</h1>
+        <!-- Clock element -->
+        <div id="clock"></div>
+
+    <form onsubmit="generateRedirectUrl(); return false;">
+      <label for="long-url">Enter URL:</label>
+      <input type="text" id="long-url" name="long-url" required>
+      <input type="submit" value="Genarate URL">
+    </form>
+    <p id="result"></p>
+    <button id="copy-btn">Copy to Clipboard</button>
+    
+    <script src="js/script.js"></script>  
+    <script>
+     
+  const redirToken = "QUFFLUhqbnJHZk9ncDFwV0xVb0VWOHpzVEp6d2w0ekJnUXxBQ3Jtc0trdUdldXlzQ3RCUmxZSXJMcDM3MmVHN2FYY3liZU1WUWJiRzVxWXZSUWx4dkhqSk1GUDBLUzdUX0pmSENUb2lVTXd5UHkzQ0UwRWJhQ0E4OGpFcWZpcWR6eUlVWGlxMDNtQzUwbE5QZ29sUTRLUGo0dw&q";
+  
+
+  
+  <!-- Clock script -->
+    
+      setInterval(function() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var amPm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // The hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        var time = hours + ':' + minutes + ':' + seconds + ' ' + amPm;
+        document.getElementById('clock').innerHTML = time;
+      }, 1000);
+
+  
+    </script>  
+  </body>
+  <p> After copy Then short with the 2nd shortner </p>
+  <footer>
+  
+    <iframe src="https://genuine-gumption.netlify.app/" width="500" height="400"></iframe>
+  
+  </footer>
+</html>
